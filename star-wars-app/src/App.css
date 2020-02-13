@@ -12,3 +12,17 @@
   align-items: center;
   justify-content: center;
 }
+
+
+form select{
+  background-color: #282c34;
+  width: 24vw;
+  color: white;
+
+  font-size: calc(10px + 2vmin);
+}
+
+form select option {
+  text-align: center;
+
+}

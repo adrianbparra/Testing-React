@@ -1,1 +1,2 @@
 export { getData } from "./getData";
+

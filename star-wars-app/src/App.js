@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import StarWarsCharacters from "./components/StarWarsCharacters";
-
+import StarWarsOptions from "./components/StarWarsOptions";
 function App() {
+
+  const [option, setOption] = useState("people")
+  console.log(option)
+
   return (
+    
     <div className="App">
       <header className="App-header">
         <img
@@ -12,7 +17,8 @@ function App() {
           alt="logo"
         />
       </header>
-      <StarWarsCharacters />
+      <StarWarsOptions setOption={setOption}/>
+      <StarWarsCharacters option={option}/>
     </div>
   );
 }
