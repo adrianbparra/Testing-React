@@ -4,12 +4,17 @@ import Loader from "react-loader-spinner";
 import { getData } from "../api";
 import "./star-wars-characters.css";
 
-export default function StarWarsCharacters() {
-  const [url, setUrl] = useState("https://swapi.co/api/people");
+export default function StarWarsCharacters(props) {
+  console.log(props.option)
+  const [url, setUrl] = useState(`https://swapi.co/api/${props.option}`);
   const [previous, setPrevious] = useState();
   const [next, setNext] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [characters, setCharacters] = useState([]);
+
+  useEffect(()=>{
+    setUrl(`https://swapi.co/api/${props.option}`)
+  },[props.option])
   useEffect(() => {
     setIsLoading(true);
     const getCharacters = async () => {

@@ -48,8 +48,6 @@ test("next button select", async ()=>{
 
     const nextBtn = wrapper.getByText(/next/i);
 
-
-
     rtl.act(()=>{
         rtl.fireEvent.click(nextBtn)
         
@@ -61,6 +59,5 @@ test("next button select", async ()=>{
     
     expect(wrapper.getByText(/Anakin/i)).toBeVisible()
 
-    
 
 })
